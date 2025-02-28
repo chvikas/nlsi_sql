@@ -4,7 +4,7 @@ Below is a suggested content for your `README.md` file based on the code you pro
 
 # Natural Language Database Search
 
-This project is a Streamlit-based web application that allows users to query a PostgreSQL database using natural language. It leverages AI-powered SQL generation (via the Grok API from xAI), vector embeddings for similarity search (using SentenceTransformers), and a hybrid search approach to provide accurate and user-friendly database querying capabilities.
+This project is a Streamlit-based web application that allows users to query a PostgreSQL database using natural language. It leverages AI-powered SQL generation (via DeepSeek R1 using Groq API), vector embeddings for similarity search (using SentenceTransformers), and a hybrid search approach to provide accurate and user-friendly database querying capabilities.
 
 The application supports querying a database with tables for `employees`, `departments`, `orders`, and `products`, with relationships and embedded vector representations for enhanced search functionality.
 
@@ -17,8 +17,8 @@ The application supports querying a database with tables for `employees`, `depar
 
 ## Tech Stack
 - **Backend**: Python, PostgreSQL
-- **Libraries**: Streamlit, psycopg2, SentenceTransformers, Grok API (via xAI)
-- **AI**: Natural language to SQL conversion powered by the Grok API
+- **Libraries**: Streamlit, psycopg2, SentenceTransformers
+- **AI**: Natural language to SQL conversion powered by the Groq API
 - **Embeddings**: `all-MiniLM-L6-v2` model from SentenceTransformers
 
 ## Prerequisites
@@ -115,7 +115,6 @@ The database consists of the following tables:
 ## Limitations
 - The application only supports `SELECT` queries.
 - Vector similarity search requires precomputed embeddings in the database.
-- The Grok API key must be valid and properly configured.
 - Large datasets may require optimization for performance.
 
 ## Contributing
