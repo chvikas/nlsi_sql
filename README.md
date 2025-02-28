@@ -24,7 +24,7 @@ The application supports querying a database with tables for `employees`, `depar
 ## Prerequisites
 - Python 3.8+
 - PostgreSQL 13+ with `pgvector` extension installed (for vector similarity search)
-- A Grok API key from xAI
+- API key (OpenAI, Groq, etc)
 - Git (optional, for cloning the repository)
 
 ## Installation
@@ -112,26 +112,6 @@ The database consists of the following tables:
 
 **Embeddings**: Stored as `TEXT` (vector embeddings from SentenceTransformers).
 
-## Project Structure
-```
-natural-language-db-search/
-├── app.py                # Streamlit app entry point
-├── config.py             # Configuration and schema definition
-├── database/             # Database-related scripts
-│   ├── connection.py     # Database connection utilities
-│   ├── setup.py         # Database creation and table setup
-│   └── seed_data.py      # Sample data generation
-├── services/             # Core logic and services
-│   ├── api_call.py       # Grok API integration
-│   ├── query_parser.py   # Natural language to SQL conversion
-│   ├── search_services.py# Hybrid search execution
-│   └── utils.py          # Utility functions
-├── models/               # Embedding model logic
-│   └── embedding.py      # SentenceTransformer embedding functions
-├── .env                  # Environment variables (not tracked)
-└── README.md             # Project documentation
-```
-
 ## Limitations
 - The application only supports `SELECT` queries.
 - Vector similarity search requires precomputed embeddings in the database.
@@ -149,7 +129,7 @@ natural-language-db-search/
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
-- Built with assistance from Grok 3 by xAI.
+- Built with assistance from LLM.
 - Inspired by advancements in natural language processing and database querying.
 
 ---
